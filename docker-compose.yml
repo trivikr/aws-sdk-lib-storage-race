@@ -1,0 +1,8 @@
+services:
+  localstack:
+    image: "public.ecr.aws/localstack/localstack:3.7.0"
+    restart: always
+    ports:
+      - "4566:4566"
+    environment:
+      - SERVICES=s3
