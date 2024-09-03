@@ -117,7 +117,7 @@ export async function exportStuff() {
     }
 
     writer.end();
-    await uploadPromise.done;
+    await uploadPromise;
   }
 
   console.log("Export finished");
