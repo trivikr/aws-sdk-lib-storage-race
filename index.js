@@ -5,13 +5,22 @@ import {
   GetObjectCommand,
   S3Client,
 } from "@aws-sdk/client-s3";
+import { fromTemporaryCredentials } from "@aws-sdk/credential-providers";
 import { Upload } from "@aws-sdk/lib-storage";
 import pTimeout from "p-timeout";
+import dotenv from "dotenv";
 
-const BUCKET_NAME = "test";
+dotenv.config();
+
+const BUCKET_NAME = "martin-slota-test";
 
 const s3Client = new S3Client({
-  endpoint: "https://s3.localhost.localstack.cloud:4566",
+  endpoint: process.env.AWS_S3_ENDPOINT,
+  credentials: fromTemporaryCredentials({
+    params: {
+      RoleArn: process.env.AWS_ROLE_ARN,
+    },
+  }),
 });
 
 async function ensureBucketExists() {
@@ -20,10 +29,7 @@ async function ensureBucketExists() {
       new CreateBucketCommand({ Bucket: BUCKET_NAME, ACL: "public-read" })
     );
   } catch (e) {
-    if (e.name === "BucketAlreadyOwnedByYou") {
-      return;
-    }
-    throw e;
+    // intentionally ignored
   }
 }
 

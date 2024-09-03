@@ -7,12 +7,12 @@ empty stream results in a race condition which causes other S3 commands to hang.
 ## Dependencies
 
 - Node.js
-- Docker compose
 
 ## Steps to reproduce the race condition
 
 1. Clone this repository
 1. Install dependencies using `npm ci`
+1. Copy `.env.example` to `.env` and add valid values for all the environment variables
 1. Run `npm start`
 
 After some time, the script tends to lock up and fail while attempting to initiate a download stream. The output typically looks like this:
@@ -21,10 +21,8 @@ After some time, the script tends to lock up and fail while attempting to initia
 ❯ npm start
 
 > aws-sdk-lib-storage-race@1.0.0 start
-> docker compose up --wait --detach && node index.js
+> node index.js
 
-[+] Running 1/1
- ✔ Container aws-sdk-lib-storage-race-localstack-1  Healthy                                               0.5s
 Downloading batch with key object_0...
 Downloaded batch with key object_0
 Downloading batch with key object_1...

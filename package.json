@@ -19,11 +19,14 @@
   "license": "ISC",
   "type": "module",
   "scripts": {
-    "start": "docker compose up --wait --detach && node index.js"
+    "start": "node index.js",
+    "start-localstack": "docker compose up --wait && AWS_S3_ENDPOINT=https://s3.localhost.localstack.cloud:4566 node index.js"
   },
   "devDependencies": {
     "@aws-sdk/client-s3": "3.637.0",
+    "@aws-sdk/credential-providers": "^3.637.0",
     "@aws-sdk/lib-storage": "3.637.0",
+    "dotenv": "^16.4.5",
     "p-timeout": "^6.1.2",
     "prettier": "3.3.3"
   }
