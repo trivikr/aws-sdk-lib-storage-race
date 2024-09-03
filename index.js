@@ -23,6 +23,22 @@ const s3Client = new S3Client({
   }),
 });
 
+s3Client.middlewareStack.add(
+  (next, context) => async (args) => {
+    console.log("AWS SDK context", context.clientName, context.commandName);
+    console.log("AWS SDK request input", args.input);
+    const result = await next(args);
+    const { Body, ...rest } = result.output;
+    console.log("AWS SDK request output:", { ...rest, Body: "REDACTED" });
+    return result;
+  },
+  {
+    name: "MyMiddleware",
+    step: "build",
+    override: true,
+  }
+);
+
 async function ensureBucketExists() {
   try {
     await s3Client.send(
