@@ -1,0 +1,1276 @@
+
+> aws-sdk-lib-storage-race@1.0.0 start-aws
+> node index.js
+
+AWS SDK context S3Client CreateBucketCommand
+AWS SDK request input {
+  Bucket: 'martin-slota-test',
+  CreateBucketConfiguration: { LocationConstraint: 'eu-west-1' }
+}
+AWS SDK HTTP Response: {
+  statusCode: 409,
+  headers: {
+    'x-amz-bucket-region': 'eu-west-1',
+    'x-amz-request-id': 'PX82KSQA5MGC5VRC',
+    'x-amz-id-2': 'JTouAlBR+yU7p4/wvGILEgA/4z9m3Dz+enABkYonWQcHgEEYNVX2QoyUIMRxxt8AWotwQDsemSNKCdstlbISisrZzVEs1PjN',
+    'content-type': 'application/xml',
+    'transfer-encoding': 'chunked',
+    date: 'Wed, 13 Aug 2025 18:08:18 GMT',
+    server: 'AmazonS3'
+  }
+}
+AWS SDK context S3Client PutObjectCommand
+AWS SDK request input {
+  Bucket: 'martin-slota-test',
+  Key: 'object_0',
+  Body: <Buffer 73 6f 6d 65 20 64 61 74 61>
+}
+AWS SDK HTTP Response: {
+  statusCode: 200,
+  headers: {
+    'x-amz-id-2': 'hQt9wNG6CIjruT5OVkwBfIF+U8b6CihpHC3/P3OQgWzZYctB7k+DWLLYwhIzFaFWwriW/cwBsLKxZAiSCn3XhZ7aa4DY0UuR',
+    'x-amz-request-id': 'PX828MK252VYK332',
+    date: 'Wed, 13 Aug 2025 18:08:19 GMT',
+    'x-amz-server-side-encryption': 'AES256',
+    etag: '"1e50210a0202497fb79bc38b6ade6c34"',
+    'x-amz-checksum-crc64nvme': 'S/Cs/uryYoQ=',
+    'x-amz-checksum-type': 'FULL_OBJECT',
+    'content-length': '0',
+    server: 'AmazonS3'
+  }
+}
+AWS SDK request output: {
+  '$metadata': {
+    httpStatusCode: 200,
+    requestId: 'PX828MK252VYK332',
+    extendedRequestId: 'hQt9wNG6CIjruT5OVkwBfIF+U8b6CihpHC3/P3OQgWzZYctB7k+DWLLYwhIzFaFWwriW/cwBsLKxZAiSCn3XhZ7aa4DY0UuR',
+    cfId: undefined,
+    attempts: 1,
+    totalRetryDelay: 0
+  },
+  ETag: '"1e50210a0202497fb79bc38b6ade6c34"',
+  ServerSideEncryption: 'AES256',
+  Body: 'REDACTED'
+}
+AWS SDK context S3Client PutObjectCommand
+AWS SDK request input { Bucket: 'martin-slota-test', Key: 'object_1', Body: <Buffer > }
+AWS SDK HTTP Response: {
+  statusCode: 200,
+  headers: {
+    'x-amz-id-2': 'F3bbEITe1wAYY+Dkb3N3BDmFFcvc0VRbQ4Dg+jO7mF+Sc7URyJHLovxTyK6h4Uxf1zOuVp0H1yZXinzk5Rt3nKzHvMqwAbBW',
+    'x-amz-request-id': 'PX80W5P5W0NTX1S8',
+    date: 'Wed, 13 Aug 2025 18:08:19 GMT',
+    'x-amz-server-side-encryption': 'AES256',
+    etag: '"d41d8cd98f00b204e9800998ecf8427e"',
+    'x-amz-checksum-crc64nvme': 'AAAAAAAAAAA=',
+    'x-amz-checksum-type': 'FULL_OBJECT',
+    'content-length': '0',
+    server: 'AmazonS3'
+  }
+}
+AWS SDK request output: {
+  '$metadata': {
+    httpStatusCode: 200,
+    requestId: 'PX80W5P5W0NTX1S8',
+    extendedRequestId: 'F3bbEITe1wAYY+Dkb3N3BDmFFcvc0VRbQ4Dg+jO7mF+Sc7URyJHLovxTyK6h4Uxf1zOuVp0H1yZXinzk5Rt3nKzHvMqwAbBW',
+    cfId: undefined,
+    attempts: 1,
+    totalRetryDelay: 0
+  },
+  ETag: '"d41d8cd98f00b204e9800998ecf8427e"',
+  ServerSideEncryption: 'AES256',
+  Body: 'REDACTED'
+}
+Downloading batch with key object_0...
+AWS SDK context S3Client GetObjectCommand
+AWS SDK request input { Bucket: 'martin-slota-test', Key: 'object_0' }
+AWS SDK HTTP Response: {
+  statusCode: 200,
+  headers: {
+    'x-amz-id-2': 'S8QD19n99AXoLSNV79BB3jSGk/OpMhBL/sFc4Y2jemyd3iyJALWvqcKmCydfgIwUXE9Jg9zLZbyNKPdTqrzpKXDSOHvxj7Dn',
+    'x-amz-request-id': '8X8JJ3Q0GW03V79S',
+    date: 'Wed, 13 Aug 2025 18:08:20 GMT',
+    'last-modified': 'Wed, 13 Aug 2025 18:08:19 GMT',
+    etag: '"1e50210a0202497fb79bc38b6ade6c34"',
+    'x-amz-server-side-encryption': 'AES256',
+    'accept-ranges': 'bytes',
+    'content-type': 'application/octet-stream',
+    'content-length': '9',
+    server: 'AmazonS3'
+  }
+}
+AWS SDK request output: {
+  '$metadata': {
+    httpStatusCode: 200,
+    requestId: '8X8JJ3Q0GW03V79S',
+    extendedRequestId: 'S8QD19n99AXoLSNV79BB3jSGk/OpMhBL/sFc4Y2jemyd3iyJALWvqcKmCydfgIwUXE9Jg9zLZbyNKPdTqrzpKXDSOHvxj7Dn',
+    cfId: undefined,
+    attempts: 1,
+    totalRetryDelay: 0
+  },
+  AcceptRanges: 'bytes',
+  LastModified: 2025-08-13T18:08:19.000Z,
+  ContentLength: 9,
+  ETag: '"1e50210a0202497fb79bc38b6ade6c34"',
+  ContentType: 'application/octet-stream',
+  ServerSideEncryption: 'AES256',
+  Metadata: {},
+  Body: 'REDACTED'
+}
+Downloaded batch with key object_0
+Downloading batch with key object_1...
+AWS SDK context S3Client GetObjectCommand
+AWS SDK request input { Bucket: 'martin-slota-test', Key: 'object_1' }
+AWS SDK HTTP Response: {
+  statusCode: 200,
+  headers: {
+    'x-amz-id-2': 'i9V+Q0WgSLaJjzDZuNCb7O/zrnCu+FJHL4NnTp/qbwhcHgBlMhMe8K4l6i5jwKQMB7IUJlOb4ADbO/h5N+YdZyt17+YKuyI4',
+    'x-amz-request-id': '8X8Q9GQ48TY1X3NF',
+    date: 'Wed, 13 Aug 2025 18:08:20 GMT',
+    'last-modified': 'Wed, 13 Aug 2025 18:08:19 GMT',
+    etag: '"d41d8cd98f00b204e9800998ecf8427e"',
+    'x-amz-server-side-encryption': 'AES256',
+    'accept-ranges': 'bytes',
+    'content-type': 'application/octet-stream',
+    'content-length': '0',
+    server: 'AmazonS3'
+  }
+}
+AWS SDK request output: {
+  '$metadata': {
+    httpStatusCode: 200,
+    requestId: '8X8Q9GQ48TY1X3NF',
+    extendedRequestId: 'i9V+Q0WgSLaJjzDZuNCb7O/zrnCu+FJHL4NnTp/qbwhcHgBlMhMe8K4l6i5jwKQMB7IUJlOb4ADbO/h5N+YdZyt17+YKuyI4',
+    cfId: undefined,
+    attempts: 1,
+    totalRetryDelay: 0
+  },
+  AcceptRanges: 'bytes',
+  LastModified: 2025-08-13T18:08:19.000Z,
+  ContentLength: 0,
+  ETag: '"d41d8cd98f00b204e9800998ecf8427e"',
+  ContentType: 'application/octet-stream',
+  ServerSideEncryption: 'AES256',
+  Metadata: {},
+  Body: 'REDACTED'
+}
+Downloaded batch with key object_1
+AWS SDK context S3Client PutObjectCommand
+AWS SDK request input {
+  Bucket: 'martin-slota-test',
+  Key: 'object_2',
+  Body: <Buffer 73 6f 6d 65 20 64 61 74 61>
+}
+AWS SDK HTTP Response: {
+  statusCode: 200,
+  headers: {
+    'x-amz-id-2': 'Gfm2fXoSctl1IvLNxsz7soaEMFhz2CpIKLHYVQa9XqnhSMtCYP4taFe0TUz0tS0tjIR8pHS/zUd4lHxJfkNOSnFnsbPttknP',
+    'x-amz-request-id': '8X8Y098J9VT5Y9JZ',
+    date: 'Wed, 13 Aug 2025 18:08:20 GMT',
+    'x-amz-server-side-encryption': 'AES256',
+    etag: '"1e50210a0202497fb79bc38b6ade6c34"',
+    'x-amz-checksum-crc64nvme': 'S/Cs/uryYoQ=',
+    'x-amz-checksum-type': 'FULL_OBJECT',
+    'content-length': '0',
+    server: 'AmazonS3'
+  }
+}
+AWS SDK request output: {
+  '$metadata': {
+    httpStatusCode: 200,
+    requestId: '8X8Y098J9VT5Y9JZ',
+    extendedRequestId: 'Gfm2fXoSctl1IvLNxsz7soaEMFhz2CpIKLHYVQa9XqnhSMtCYP4taFe0TUz0tS0tjIR8pHS/zUd4lHxJfkNOSnFnsbPttknP',
+    cfId: undefined,
+    attempts: 1,
+    totalRetryDelay: 0
+  },
+  ETag: '"1e50210a0202497fb79bc38b6ade6c34"',
+  ServerSideEncryption: 'AES256',
+  Body: 'REDACTED'
+}
+Export finished
+AWS SDK context S3Client PutObjectCommand
+AWS SDK request input {
+  Bucket: 'martin-slota-test',
+  Key: 'object_3',
+  Body: <Buffer 73 6f 6d 65 20 64 61 74 61>
+}
+AWS SDK HTTP Response: {
+  statusCode: 200,
+  headers: {
+    'x-amz-id-2': 'vd1rXL27yHMPcBgyMY4e9+kecR4i23ApU1ap/lGmPa83IZ7QtqBbZwilqj3vSgvrHzbgo8F0L0FJp21oePDrk29NxdGoMW5Y',
+    'x-amz-request-id': '8X8QRJTHSDSDRYEG',
+    date: 'Wed, 13 Aug 2025 18:08:20 GMT',
+    'x-amz-server-side-encryption': 'AES256',
+    etag: '"1e50210a0202497fb79bc38b6ade6c34"',
+    'x-amz-checksum-crc64nvme': 'S/Cs/uryYoQ=',
+    'x-amz-checksum-type': 'FULL_OBJECT',
+    'content-length': '0',
+    server: 'AmazonS3'
+  }
+}
+AWS SDK request output: {
+  '$metadata': {
+    httpStatusCode: 200,
+    requestId: '8X8QRJTHSDSDRYEG',
+    extendedRequestId: 'vd1rXL27yHMPcBgyMY4e9+kecR4i23ApU1ap/lGmPa83IZ7QtqBbZwilqj3vSgvrHzbgo8F0L0FJp21oePDrk29NxdGoMW5Y',
+    cfId: undefined,
+    attempts: 1,
+    totalRetryDelay: 0
+  },
+  ETag: '"1e50210a0202497fb79bc38b6ade6c34"',
+  ServerSideEncryption: 'AES256',
+  Body: 'REDACTED'
+}
+AWS SDK context S3Client PutObjectCommand
+AWS SDK request input { Bucket: 'martin-slota-test', Key: 'object_4', Body: <Buffer > }
+AWS SDK HTTP Response: {
+  statusCode: 200,
+  headers: {
+    'x-amz-id-2': 'uhjGtTb7KHrfAJs4u+3rFVGVB/THMBvRA1CYEoWGsOPgDAKwIz3vYFd4fKW+FEtaRLaVYdyMUNs+bvBro19RGlQhaQRaLXb9',
+    'x-amz-request-id': '8X8ZJ71P5855BPHE',
+    date: 'Wed, 13 Aug 2025 18:08:20 GMT',
+    'x-amz-server-side-encryption': 'AES256',
+    etag: '"d41d8cd98f00b204e9800998ecf8427e"',
+    'x-amz-checksum-crc64nvme': 'AAAAAAAAAAA=',
+    'x-amz-checksum-type': 'FULL_OBJECT',
+    'content-length': '0',
+    server: 'AmazonS3'
+  }
+}
+AWS SDK request output: {
+  '$metadata': {
+    httpStatusCode: 200,
+    requestId: '8X8ZJ71P5855BPHE',
+    extendedRequestId: 'uhjGtTb7KHrfAJs4u+3rFVGVB/THMBvRA1CYEoWGsOPgDAKwIz3vYFd4fKW+FEtaRLaVYdyMUNs+bvBro19RGlQhaQRaLXb9',
+    cfId: undefined,
+    attempts: 1,
+    totalRetryDelay: 0
+  },
+  ETag: '"d41d8cd98f00b204e9800998ecf8427e"',
+  ServerSideEncryption: 'AES256',
+  Body: 'REDACTED'
+}
+Downloading batch with key object_3...
+AWS SDK context S3Client GetObjectCommand
+AWS SDK request input { Bucket: 'martin-slota-test', Key: 'object_3' }
+AWS SDK HTTP Response: {
+  statusCode: 200,
+  headers: {
+    'x-amz-id-2': 'JBUrjYhHlh1U0FayPh4D1q6VOFME8n1gO7oTqwXW4vz2VZb6UyZuXaCffoRoipnUOcrrpnW9cNrTbfFk1smXRASgB69pGVlo',
+    'x-amz-request-id': '8X8N6RDBYQZA3DYR',
+    date: 'Wed, 13 Aug 2025 18:08:20 GMT',
+    'last-modified': 'Wed, 13 Aug 2025 18:08:20 GMT',
+    etag: '"1e50210a0202497fb79bc38b6ade6c34"',
+    'x-amz-server-side-encryption': 'AES256',
+    'accept-ranges': 'bytes',
+    'content-type': 'application/octet-stream',
+    'content-length': '9',
+    server: 'AmazonS3'
+  }
+}
+AWS SDK request output: {
+  '$metadata': {
+    httpStatusCode: 200,
+    requestId: '8X8N6RDBYQZA3DYR',
+    extendedRequestId: 'JBUrjYhHlh1U0FayPh4D1q6VOFME8n1gO7oTqwXW4vz2VZb6UyZuXaCffoRoipnUOcrrpnW9cNrTbfFk1smXRASgB69pGVlo',
+    cfId: undefined,
+    attempts: 1,
+    totalRetryDelay: 0
+  },
+  AcceptRanges: 'bytes',
+  LastModified: 2025-08-13T18:08:20.000Z,
+  ContentLength: 9,
+  ETag: '"1e50210a0202497fb79bc38b6ade6c34"',
+  ContentType: 'application/octet-stream',
+  ServerSideEncryption: 'AES256',
+  Metadata: {},
+  Body: 'REDACTED'
+}
+Downloaded batch with key object_3
+Downloading batch with key object_4...
+AWS SDK context S3Client GetObjectCommand
+AWS SDK request input { Bucket: 'martin-slota-test', Key: 'object_4' }
+AWS SDK HTTP Response: {
+  statusCode: 200,
+  headers: {
+    'x-amz-id-2': 'arMAxRFFF6Cl2nBm5xjC73v6AeNtxhA11C19aopuWngvLUvF7Om4jwdI9FwAEZt3Qgm0cJcSd9Q9A7B7EnE5ng355F1Altkk',
+    'x-amz-request-id': '8X8SBNVQAAFQBD2Y',
+    date: 'Wed, 13 Aug 2025 18:08:20 GMT',
+    'last-modified': 'Wed, 13 Aug 2025 18:08:20 GMT',
+    etag: '"d41d8cd98f00b204e9800998ecf8427e"',
+    'x-amz-server-side-encryption': 'AES256',
+    'accept-ranges': 'bytes',
+    'content-type': 'application/octet-stream',
+    'content-length': '0',
+    server: 'AmazonS3'
+  }
+}
+AWS SDK request output: {
+  '$metadata': {
+    httpStatusCode: 200,
+    requestId: '8X8SBNVQAAFQBD2Y',
+    extendedRequestId: 'arMAxRFFF6Cl2nBm5xjC73v6AeNtxhA11C19aopuWngvLUvF7Om4jwdI9FwAEZt3Qgm0cJcSd9Q9A7B7EnE5ng355F1Altkk',
+    cfId: undefined,
+    attempts: 1,
+    totalRetryDelay: 0
+  },
+  AcceptRanges: 'bytes',
+  LastModified: 2025-08-13T18:08:20.000Z,
+  ContentLength: 0,
+  ETag: '"d41d8cd98f00b204e9800998ecf8427e"',
+  ContentType: 'application/octet-stream',
+  ServerSideEncryption: 'AES256',
+  Metadata: {},
+  Body: 'REDACTED'
+}
+Downloaded batch with key object_4
+AWS SDK context S3Client PutObjectCommand
+AWS SDK request input {
+  Bucket: 'martin-slota-test',
+  Key: 'object_5',
+  Body: <Buffer 73 6f 6d 65 20 64 61 74 61>
+}
+AWS SDK HTTP Response: {
+  statusCode: 200,
+  headers: {
+    'x-amz-id-2': 'VR+7J6j1zVKiIEp2skoviJOA4NpudPdRPzddNYRaXcjnPW2e+t6Ci+oXO0YOMk4f+9KPM09tWZR2+7FpGRT8oqe6RK4XFlCA',
+    'x-amz-request-id': '8X8K9TWGH8BQM46M',
+    date: 'Wed, 13 Aug 2025 18:08:20 GMT',
+    'x-amz-server-side-encryption': 'AES256',
+    etag: '"1e50210a0202497fb79bc38b6ade6c34"',
+    'x-amz-checksum-crc64nvme': 'S/Cs/uryYoQ=',
+    'x-amz-checksum-type': 'FULL_OBJECT',
+    'content-length': '0',
+    server: 'AmazonS3'
+  }
+}
+AWS SDK request output: {
+  '$metadata': {
+    httpStatusCode: 200,
+    requestId: '8X8K9TWGH8BQM46M',
+    extendedRequestId: 'VR+7J6j1zVKiIEp2skoviJOA4NpudPdRPzddNYRaXcjnPW2e+t6Ci+oXO0YOMk4f+9KPM09tWZR2+7FpGRT8oqe6RK4XFlCA',
+    cfId: undefined,
+    attempts: 1,
+    totalRetryDelay: 0
+  },
+  ETag: '"1e50210a0202497fb79bc38b6ade6c34"',
+  ServerSideEncryption: 'AES256',
+  Body: 'REDACTED'
+}
+Export finished
+AWS SDK context S3Client PutObjectCommand
+AWS SDK request input {
+  Bucket: 'martin-slota-test',
+  Key: 'object_6',
+  Body: <Buffer 73 6f 6d 65 20 64 61 74 61>
+}
+AWS SDK HTTP Response: {
+  statusCode: 200,
+  headers: {
+    'x-amz-id-2': 'kos2c5ToKhUjYmIE1/1gGyjODpZLUFHT2B1WIUeUTaZW5LSdp4oHb7mh2R5k9/FR06Rw4CLrPmeAZ6jzrJxACkqAjh85y/Wz',
+    'x-amz-request-id': '8X8HATQ8XR9DECXQ',
+    date: 'Wed, 13 Aug 2025 18:08:20 GMT',
+    'x-amz-server-side-encryption': 'AES256',
+    etag: '"1e50210a0202497fb79bc38b6ade6c34"',
+    'x-amz-checksum-crc64nvme': 'S/Cs/uryYoQ=',
+    'x-amz-checksum-type': 'FULL_OBJECT',
+    'content-length': '0',
+    server: 'AmazonS3'
+  }
+}
+AWS SDK request output: {
+  '$metadata': {
+    httpStatusCode: 200,
+    requestId: '8X8HATQ8XR9DECXQ',
+    extendedRequestId: 'kos2c5ToKhUjYmIE1/1gGyjODpZLUFHT2B1WIUeUTaZW5LSdp4oHb7mh2R5k9/FR06Rw4CLrPmeAZ6jzrJxACkqAjh85y/Wz',
+    cfId: undefined,
+    attempts: 1,
+    totalRetryDelay: 0
+  },
+  ETag: '"1e50210a0202497fb79bc38b6ade6c34"',
+  ServerSideEncryption: 'AES256',
+  Body: 'REDACTED'
+}
+AWS SDK context S3Client PutObjectCommand
+AWS SDK request input { Bucket: 'martin-slota-test', Key: 'object_7', Body: <Buffer > }
+AWS SDK HTTP Response: {
+  statusCode: 200,
+  headers: {
+    'x-amz-id-2': 'V6fCmOBKgBKGgdfH5xQ9dLPu+GjGTfbI6ZovANdz8DP3cNywFg7zziSxo24+z5jWSctwpRSwtQSQrTknFKeFgNxlSP9NID95',
+    'x-amz-request-id': 'F3TD6BQ9V6WPVF98',
+    date: 'Wed, 13 Aug 2025 18:08:21 GMT',
+    'x-amz-server-side-encryption': 'AES256',
+    etag: '"d41d8cd98f00b204e9800998ecf8427e"',
+    'x-amz-checksum-crc64nvme': 'AAAAAAAAAAA=',
+    'x-amz-checksum-type': 'FULL_OBJECT',
+    'content-length': '0',
+    server: 'AmazonS3'
+  }
+}
+AWS SDK request output: {
+  '$metadata': {
+    httpStatusCode: 200,
+    requestId: 'F3TD6BQ9V6WPVF98',
+    extendedRequestId: 'V6fCmOBKgBKGgdfH5xQ9dLPu+GjGTfbI6ZovANdz8DP3cNywFg7zziSxo24+z5jWSctwpRSwtQSQrTknFKeFgNxlSP9NID95',
+    cfId: undefined,
+    attempts: 1,
+    totalRetryDelay: 0
+  },
+  ETag: '"d41d8cd98f00b204e9800998ecf8427e"',
+  ServerSideEncryption: 'AES256',
+  Body: 'REDACTED'
+}
+Downloading batch with key object_6...
+AWS SDK context S3Client GetObjectCommand
+AWS SDK request input { Bucket: 'martin-slota-test', Key: 'object_6' }
+AWS SDK HTTP Response: {
+  statusCode: 200,
+  headers: {
+    'x-amz-id-2': '33iR1SIhVzLnxxMrYOBLEixeeWWXTAuEEvIPUJoWFDfshWoqcD+IvtlyGeJIXvGQ+AuLMAgNniH54b/YN0ltjVi7H/5YmZAE',
+    'x-amz-request-id': 'F3TB5EZCZ5Q3P3E4',
+    date: 'Wed, 13 Aug 2025 18:08:21 GMT',
+    'last-modified': 'Wed, 13 Aug 2025 18:08:20 GMT',
+    etag: '"1e50210a0202497fb79bc38b6ade6c34"',
+    'x-amz-server-side-encryption': 'AES256',
+    'accept-ranges': 'bytes',
+    'content-type': 'application/octet-stream',
+    'content-length': '9',
+    server: 'AmazonS3'
+  }
+}
+AWS SDK request output: {
+  '$metadata': {
+    httpStatusCode: 200,
+    requestId: 'F3TB5EZCZ5Q3P3E4',
+    extendedRequestId: '33iR1SIhVzLnxxMrYOBLEixeeWWXTAuEEvIPUJoWFDfshWoqcD+IvtlyGeJIXvGQ+AuLMAgNniH54b/YN0ltjVi7H/5YmZAE',
+    cfId: undefined,
+    attempts: 1,
+    totalRetryDelay: 0
+  },
+  AcceptRanges: 'bytes',
+  LastModified: 2025-08-13T18:08:20.000Z,
+  ContentLength: 9,
+  ETag: '"1e50210a0202497fb79bc38b6ade6c34"',
+  ContentType: 'application/octet-stream',
+  ServerSideEncryption: 'AES256',
+  Metadata: {},
+  Body: 'REDACTED'
+}
+Downloaded batch with key object_6
+Downloading batch with key object_7...
+AWS SDK context S3Client GetObjectCommand
+AWS SDK request input { Bucket: 'martin-slota-test', Key: 'object_7' }
+AWS SDK HTTP Response: {
+  statusCode: 200,
+  headers: {
+    'x-amz-id-2': '/D8RTFjCXVJzOsytD5HpKyN9jiDEt8eGV+JtgxwPZl2v7hmpu1ooKkeEtAUrw8iQ/NObcHDD6X1VPFzuZJWM+YYadS6ySw1y',
+    'x-amz-request-id': 'F3TCME304ZM4NY1R',
+    date: 'Wed, 13 Aug 2025 18:08:21 GMT',
+    'last-modified': 'Wed, 13 Aug 2025 18:08:21 GMT',
+    etag: '"d41d8cd98f00b204e9800998ecf8427e"',
+    'x-amz-server-side-encryption': 'AES256',
+    'accept-ranges': 'bytes',
+    'content-type': 'application/octet-stream',
+    'content-length': '0',
+    server: 'AmazonS3'
+  }
+}
+AWS SDK request output: {
+  '$metadata': {
+    httpStatusCode: 200,
+    requestId: 'F3TCME304ZM4NY1R',
+    extendedRequestId: '/D8RTFjCXVJzOsytD5HpKyN9jiDEt8eGV+JtgxwPZl2v7hmpu1ooKkeEtAUrw8iQ/NObcHDD6X1VPFzuZJWM+YYadS6ySw1y',
+    cfId: undefined,
+    attempts: 1,
+    totalRetryDelay: 0
+  },
+  AcceptRanges: 'bytes',
+  LastModified: 2025-08-13T18:08:21.000Z,
+  ContentLength: 0,
+  ETag: '"d41d8cd98f00b204e9800998ecf8427e"',
+  ContentType: 'application/octet-stream',
+  ServerSideEncryption: 'AES256',
+  Metadata: {},
+  Body: 'REDACTED'
+}
+Downloaded batch with key object_7
+AWS SDK context S3Client PutObjectCommand
+AWS SDK request input {
+  Bucket: 'martin-slota-test',
+  Key: 'object_8',
+  Body: <Buffer 73 6f 6d 65 20 64 61 74 61>
+}
+AWS SDK HTTP Response: {
+  statusCode: 200,
+  headers: {
+    'x-amz-id-2': '1xzJ1zUj2kCTrDxfdzhrzuagKndfmsDn7wAlhHxTeKGVwIRL9KoJNrBzfFoYxWVcwMxQKPOg/MSIm8qv20v5OjSzNRQSRVeY',
+    'x-amz-request-id': 'F3TA96NT8VT5444H',
+    date: 'Wed, 13 Aug 2025 18:08:21 GMT',
+    'x-amz-server-side-encryption': 'AES256',
+    etag: '"1e50210a0202497fb79bc38b6ade6c34"',
+    'x-amz-checksum-crc64nvme': 'S/Cs/uryYoQ=',
+    'x-amz-checksum-type': 'FULL_OBJECT',
+    'content-length': '0',
+    server: 'AmazonS3'
+  }
+}
+AWS SDK request output: {
+  '$metadata': {
+    httpStatusCode: 200,
+    requestId: 'F3TA96NT8VT5444H',
+    extendedRequestId: '1xzJ1zUj2kCTrDxfdzhrzuagKndfmsDn7wAlhHxTeKGVwIRL9KoJNrBzfFoYxWVcwMxQKPOg/MSIm8qv20v5OjSzNRQSRVeY',
+    cfId: undefined,
+    attempts: 1,
+    totalRetryDelay: 0
+  },
+  ETag: '"1e50210a0202497fb79bc38b6ade6c34"',
+  ServerSideEncryption: 'AES256',
+  Body: 'REDACTED'
+}
+Export finished
+AWS SDK context S3Client PutObjectCommand
+AWS SDK request input {
+  Bucket: 'martin-slota-test',
+  Key: 'object_9',
+  Body: <Buffer 73 6f 6d 65 20 64 61 74 61>
+}
+AWS SDK HTTP Response: {
+  statusCode: 200,
+  headers: {
+    'x-amz-id-2': 'ITvpRJi76AX+1IP2qCheGktBfQ2rnL81lzXlLxqi9r21k0VRRhXC75vpQmjAUHulFieQCUAQvLBY9hqoJ1ITZRXX3QMO3szC',
+    'x-amz-request-id': 'F3TCZXEFZ3GZ3AZJ',
+    date: 'Wed, 13 Aug 2025 18:08:21 GMT',
+    'x-amz-server-side-encryption': 'AES256',
+    etag: '"1e50210a0202497fb79bc38b6ade6c34"',
+    'x-amz-checksum-crc64nvme': 'S/Cs/uryYoQ=',
+    'x-amz-checksum-type': 'FULL_OBJECT',
+    'content-length': '0',
+    server: 'AmazonS3'
+  }
+}
+AWS SDK request output: {
+  '$metadata': {
+    httpStatusCode: 200,
+    requestId: 'F3TCZXEFZ3GZ3AZJ',
+    extendedRequestId: 'ITvpRJi76AX+1IP2qCheGktBfQ2rnL81lzXlLxqi9r21k0VRRhXC75vpQmjAUHulFieQCUAQvLBY9hqoJ1ITZRXX3QMO3szC',
+    cfId: undefined,
+    attempts: 1,
+    totalRetryDelay: 0
+  },
+  ETag: '"1e50210a0202497fb79bc38b6ade6c34"',
+  ServerSideEncryption: 'AES256',
+  Body: 'REDACTED'
+}
+AWS SDK context S3Client PutObjectCommand
+AWS SDK request input { Bucket: 'martin-slota-test', Key: 'object_10', Body: <Buffer > }
+AWS SDK HTTP Response: {
+  statusCode: 200,
+  headers: {
+    'x-amz-id-2': '+7wPcBDrMD8CegbbB4QbooQuBjNQtI4P7gO+arXtLviS3eEZRq1awm8t+dKXQ+c5wLX6IzL97p29n9B9TftaNYCSuq8zyNjG',
+    'x-amz-request-id': 'F3T7THN73XTPB5SJ',
+    date: 'Wed, 13 Aug 2025 18:08:21 GMT',
+    'x-amz-server-side-encryption': 'AES256',
+    etag: '"d41d8cd98f00b204e9800998ecf8427e"',
+    'x-amz-checksum-crc64nvme': 'AAAAAAAAAAA=',
+    'x-amz-checksum-type': 'FULL_OBJECT',
+    'content-length': '0',
+    server: 'AmazonS3'
+  }
+}
+AWS SDK request output: {
+  '$metadata': {
+    httpStatusCode: 200,
+    requestId: 'F3T7THN73XTPB5SJ',
+    extendedRequestId: '+7wPcBDrMD8CegbbB4QbooQuBjNQtI4P7gO+arXtLviS3eEZRq1awm8t+dKXQ+c5wLX6IzL97p29n9B9TftaNYCSuq8zyNjG',
+    cfId: undefined,
+    attempts: 1,
+    totalRetryDelay: 0
+  },
+  ETag: '"d41d8cd98f00b204e9800998ecf8427e"',
+  ServerSideEncryption: 'AES256',
+  Body: 'REDACTED'
+}
+Downloading batch with key object_9...
+AWS SDK context S3Client GetObjectCommand
+AWS SDK request input { Bucket: 'martin-slota-test', Key: 'object_9' }
+AWS SDK HTTP Response: {
+  statusCode: 200,
+  headers: {
+    'x-amz-id-2': 'VceVo3fYpLRxGyluPX8FStJwTd+rNY+uyq4UjltxvaQjUI6t20fN4PEnq3FDomhDP3RPnbAsGZ220MDX3Cpe1EMJjrf6umJ+',
+    'x-amz-request-id': 'F3TD85TE7RVMS1VD',
+    date: 'Wed, 13 Aug 2025 18:08:21 GMT',
+    'last-modified': 'Wed, 13 Aug 2025 18:08:21 GMT',
+    etag: '"1e50210a0202497fb79bc38b6ade6c34"',
+    'x-amz-server-side-encryption': 'AES256',
+    'accept-ranges': 'bytes',
+    'content-type': 'application/octet-stream',
+    'content-length': '9',
+    server: 'AmazonS3'
+  }
+}
+AWS SDK request output: {
+  '$metadata': {
+    httpStatusCode: 200,
+    requestId: 'F3TD85TE7RVMS1VD',
+    extendedRequestId: 'VceVo3fYpLRxGyluPX8FStJwTd+rNY+uyq4UjltxvaQjUI6t20fN4PEnq3FDomhDP3RPnbAsGZ220MDX3Cpe1EMJjrf6umJ+',
+    cfId: undefined,
+    attempts: 1,
+    totalRetryDelay: 0
+  },
+  AcceptRanges: 'bytes',
+  LastModified: 2025-08-13T18:08:21.000Z,
+  ContentLength: 9,
+  ETag: '"1e50210a0202497fb79bc38b6ade6c34"',
+  ContentType: 'application/octet-stream',
+  ServerSideEncryption: 'AES256',
+  Metadata: {},
+  Body: 'REDACTED'
+}
+Downloaded batch with key object_9
+Downloading batch with key object_10...
+AWS SDK context S3Client GetObjectCommand
+AWS SDK request input { Bucket: 'martin-slota-test', Key: 'object_10' }
+AWS SDK HTTP Response: {
+  statusCode: 200,
+  headers: {
+    'x-amz-id-2': 'CvHXA8eTxV5pu7wRLmcWxVXKKDAqocCqA9AI+i+kmsOHdrtOTjdhoStBc/ubiwATz5JIVT9DYZHRvUrD5tH0r2LHWiraefbu',
+    'x-amz-request-id': 'F3T4T3DSFMVRG46Y',
+    date: 'Wed, 13 Aug 2025 18:08:21 GMT',
+    'last-modified': 'Wed, 13 Aug 2025 18:08:21 GMT',
+    etag: '"d41d8cd98f00b204e9800998ecf8427e"',
+    'x-amz-server-side-encryption': 'AES256',
+    'accept-ranges': 'bytes',
+    'content-type': 'application/octet-stream',
+    'content-length': '0',
+    server: 'AmazonS3'
+  }
+}
+AWS SDK request output: {
+  '$metadata': {
+    httpStatusCode: 200,
+    requestId: 'F3T4T3DSFMVRG46Y',
+    extendedRequestId: 'CvHXA8eTxV5pu7wRLmcWxVXKKDAqocCqA9AI+i+kmsOHdrtOTjdhoStBc/ubiwATz5JIVT9DYZHRvUrD5tH0r2LHWiraefbu',
+    cfId: undefined,
+    attempts: 1,
+    totalRetryDelay: 0
+  },
+  AcceptRanges: 'bytes',
+  LastModified: 2025-08-13T18:08:21.000Z,
+  ContentLength: 0,
+  ETag: '"d41d8cd98f00b204e9800998ecf8427e"',
+  ContentType: 'application/octet-stream',
+  ServerSideEncryption: 'AES256',
+  Metadata: {},
+  Body: 'REDACTED'
+}
+Downloaded batch with key object_10
+AWS SDK context S3Client PutObjectCommand
+AWS SDK request input {
+  Bucket: 'martin-slota-test',
+  Key: 'object_11',
+  Body: <Buffer 73 6f 6d 65 20 64 61 74 61>
+}
+AWS SDK HTTP Response: {
+  statusCode: 200,
+  headers: {
+    'x-amz-id-2': 'FFRD9SdPnvvIqeQ5KbGg8NvDuK2a0rj0D+JtXkRpCU2vUvOy1Otvu6PZ6e6IxNLHZAG+JUGj6j3cIIIuoUvVcUzd0zGNuDHZ',
+    'x-amz-request-id': 'F3T0GNKY0CBGVD5N',
+    date: 'Wed, 13 Aug 2025 18:08:21 GMT',
+    'x-amz-server-side-encryption': 'AES256',
+    etag: '"1e50210a0202497fb79bc38b6ade6c34"',
+    'x-amz-checksum-crc64nvme': 'S/Cs/uryYoQ=',
+    'x-amz-checksum-type': 'FULL_OBJECT',
+    'content-length': '0',
+    server: 'AmazonS3'
+  }
+}
+AWS SDK request output: {
+  '$metadata': {
+    httpStatusCode: 200,
+    requestId: 'F3T0GNKY0CBGVD5N',
+    extendedRequestId: 'FFRD9SdPnvvIqeQ5KbGg8NvDuK2a0rj0D+JtXkRpCU2vUvOy1Otvu6PZ6e6IxNLHZAG+JUGj6j3cIIIuoUvVcUzd0zGNuDHZ',
+    cfId: undefined,
+    attempts: 1,
+    totalRetryDelay: 0
+  },
+  ETag: '"1e50210a0202497fb79bc38b6ade6c34"',
+  ServerSideEncryption: 'AES256',
+  Body: 'REDACTED'
+}
+Export finished
+AWS SDK context S3Client PutObjectCommand
+AWS SDK request input {
+  Bucket: 'martin-slota-test',
+  Key: 'object_12',
+  Body: <Buffer 73 6f 6d 65 20 64 61 74 61>
+}
+AWS SDK HTTP Response: {
+  statusCode: 200,
+  headers: {
+    'x-amz-id-2': 'XNTxkD2h5SXqLySgakFyk1rTl9TkF7doGa2z6WM91zvu56cghkvm4F0Ez819IfPaKsy706dTBB1XjsrxBVHIncoGsMeZMwsW',
+    'x-amz-request-id': 'F3T8HK756X07H65R',
+    date: 'Wed, 13 Aug 2025 18:08:21 GMT',
+    'x-amz-server-side-encryption': 'AES256',
+    etag: '"1e50210a0202497fb79bc38b6ade6c34"',
+    'x-amz-checksum-crc64nvme': 'S/Cs/uryYoQ=',
+    'x-amz-checksum-type': 'FULL_OBJECT',
+    'content-length': '0',
+    server: 'AmazonS3'
+  }
+}
+AWS SDK request output: {
+  '$metadata': {
+    httpStatusCode: 200,
+    requestId: 'F3T8HK756X07H65R',
+    extendedRequestId: 'XNTxkD2h5SXqLySgakFyk1rTl9TkF7doGa2z6WM91zvu56cghkvm4F0Ez819IfPaKsy706dTBB1XjsrxBVHIncoGsMeZMwsW',
+    cfId: undefined,
+    attempts: 1,
+    totalRetryDelay: 0
+  },
+  ETag: '"1e50210a0202497fb79bc38b6ade6c34"',
+  ServerSideEncryption: 'AES256',
+  Body: 'REDACTED'
+}
+AWS SDK context S3Client PutObjectCommand
+AWS SDK request input { Bucket: 'martin-slota-test', Key: 'object_13', Body: <Buffer > }
+AWS SDK HTTP Response: {
+  statusCode: 200,
+  headers: {
+    'x-amz-id-2': 'RaejRqFkiXQ6q0lKYbvU/DuJYjCb6s9+Ls/hLAunPb3/Zr0xeiknuypwSV64KrzMq3c7n+utKDO3ANKLX3kH0Oj1GcfqrGrf',
+    'x-amz-request-id': 'JD1VTJ5AT7TA1DCK',
+    date: 'Wed, 13 Aug 2025 18:08:22 GMT',
+    'x-amz-server-side-encryption': 'AES256',
+    etag: '"d41d8cd98f00b204e9800998ecf8427e"',
+    'x-amz-checksum-crc64nvme': 'AAAAAAAAAAA=',
+    'x-amz-checksum-type': 'FULL_OBJECT',
+    'content-length': '0',
+    server: 'AmazonS3'
+  }
+}
+AWS SDK request output: {
+  '$metadata': {
+    httpStatusCode: 200,
+    requestId: 'JD1VTJ5AT7TA1DCK',
+    extendedRequestId: 'RaejRqFkiXQ6q0lKYbvU/DuJYjCb6s9+Ls/hLAunPb3/Zr0xeiknuypwSV64KrzMq3c7n+utKDO3ANKLX3kH0Oj1GcfqrGrf',
+    cfId: undefined,
+    attempts: 1,
+    totalRetryDelay: 0
+  },
+  ETag: '"d41d8cd98f00b204e9800998ecf8427e"',
+  ServerSideEncryption: 'AES256',
+  Body: 'REDACTED'
+}
+Downloading batch with key object_12...
+AWS SDK context S3Client GetObjectCommand
+AWS SDK request input { Bucket: 'martin-slota-test', Key: 'object_12' }
+AWS SDK HTTP Response: {
+  statusCode: 200,
+  headers: {
+    'x-amz-id-2': 'FUVNmAxYrdfqAKZ4ravN5s4HwtNBuZhLf9ivktplTUrN23aGIrAKwd8EhC8EtgQkFRHBG65OKS6SmOwQI94q4lPv5umPFRsF',
+    'x-amz-request-id': 'JD1Y9BEY6RS58JM4',
+    date: 'Wed, 13 Aug 2025 18:08:22 GMT',
+    'last-modified': 'Wed, 13 Aug 2025 18:08:21 GMT',
+    etag: '"1e50210a0202497fb79bc38b6ade6c34"',
+    'x-amz-server-side-encryption': 'AES256',
+    'accept-ranges': 'bytes',
+    'content-type': 'application/octet-stream',
+    'content-length': '9',
+    server: 'AmazonS3'
+  }
+}
+AWS SDK request output: {
+  '$metadata': {
+    httpStatusCode: 200,
+    requestId: 'JD1Y9BEY6RS58JM4',
+    extendedRequestId: 'FUVNmAxYrdfqAKZ4ravN5s4HwtNBuZhLf9ivktplTUrN23aGIrAKwd8EhC8EtgQkFRHBG65OKS6SmOwQI94q4lPv5umPFRsF',
+    cfId: undefined,
+    attempts: 1,
+    totalRetryDelay: 0
+  },
+  AcceptRanges: 'bytes',
+  LastModified: 2025-08-13T18:08:21.000Z,
+  ContentLength: 9,
+  ETag: '"1e50210a0202497fb79bc38b6ade6c34"',
+  ContentType: 'application/octet-stream',
+  ServerSideEncryption: 'AES256',
+  Metadata: {},
+  Body: 'REDACTED'
+}
+Downloaded batch with key object_12
+Downloading batch with key object_13...
+AWS SDK context S3Client GetObjectCommand
+AWS SDK request input { Bucket: 'martin-slota-test', Key: 'object_13' }
+AWS SDK HTTP Response: {
+  statusCode: 200,
+  headers: {
+    'x-amz-id-2': 'pCZCdwXOynEqAwVskREBcYxONkMIv7DhIStSB2LZ/ftdEm21083rECilJvxo8lKrFhBx2p3bw5mBS7jebJLMaZI/5phNKfX2',
+    'x-amz-request-id': 'JD1WJZXB4A481NWW',
+    date: 'Wed, 13 Aug 2025 18:08:22 GMT',
+    'last-modified': 'Wed, 13 Aug 2025 18:08:22 GMT',
+    etag: '"d41d8cd98f00b204e9800998ecf8427e"',
+    'x-amz-server-side-encryption': 'AES256',
+    'accept-ranges': 'bytes',
+    'content-type': 'application/octet-stream',
+    'content-length': '0',
+    server: 'AmazonS3'
+  }
+}
+AWS SDK request output: {
+  '$metadata': {
+    httpStatusCode: 200,
+    requestId: 'JD1WJZXB4A481NWW',
+    extendedRequestId: 'pCZCdwXOynEqAwVskREBcYxONkMIv7DhIStSB2LZ/ftdEm21083rECilJvxo8lKrFhBx2p3bw5mBS7jebJLMaZI/5phNKfX2',
+    cfId: undefined,
+    attempts: 1,
+    totalRetryDelay: 0
+  },
+  AcceptRanges: 'bytes',
+  LastModified: 2025-08-13T18:08:22.000Z,
+  ContentLength: 0,
+  ETag: '"d41d8cd98f00b204e9800998ecf8427e"',
+  ContentType: 'application/octet-stream',
+  ServerSideEncryption: 'AES256',
+  Metadata: {},
+  Body: 'REDACTED'
+}
+Downloaded batch with key object_13
+AWS SDK context S3Client PutObjectCommand
+AWS SDK request input {
+  Bucket: 'martin-slota-test',
+  Key: 'object_14',
+  Body: <Buffer 73 6f 6d 65 20 64 61 74 61>
+}
+AWS SDK HTTP Response: {
+  statusCode: 200,
+  headers: {
+    'x-amz-id-2': 'hPBoU6L0cb2tEDC+lggNBuhLI5nAgZULQqgyKlNxHTjg5xvyJtUVC/HKfDkIQoDlqMI4oaC9dQ1jiHf11QSUlkfnB1TOxphs',
+    'x-amz-request-id': 'JD1V1FNFFCVGX6CW',
+    date: 'Wed, 13 Aug 2025 18:08:22 GMT',
+    'x-amz-server-side-encryption': 'AES256',
+    etag: '"1e50210a0202497fb79bc38b6ade6c34"',
+    'x-amz-checksum-crc64nvme': 'S/Cs/uryYoQ=',
+    'x-amz-checksum-type': 'FULL_OBJECT',
+    'content-length': '0',
+    server: 'AmazonS3'
+  }
+}
+AWS SDK request output: {
+  '$metadata': {
+    httpStatusCode: 200,
+    requestId: 'JD1V1FNFFCVGX6CW',
+    extendedRequestId: 'hPBoU6L0cb2tEDC+lggNBuhLI5nAgZULQqgyKlNxHTjg5xvyJtUVC/HKfDkIQoDlqMI4oaC9dQ1jiHf11QSUlkfnB1TOxphs',
+    cfId: undefined,
+    attempts: 1,
+    totalRetryDelay: 0
+  },
+  ETag: '"1e50210a0202497fb79bc38b6ade6c34"',
+  ServerSideEncryption: 'AES256',
+  Body: 'REDACTED'
+}
+Export finished
+AWS SDK context S3Client PutObjectCommand
+AWS SDK request input {
+  Bucket: 'martin-slota-test',
+  Key: 'object_15',
+  Body: <Buffer 73 6f 6d 65 20 64 61 74 61>
+}
+AWS SDK HTTP Response: {
+  statusCode: 200,
+  headers: {
+    'x-amz-id-2': 'aYBYPTaBbjLl4r0KnxOEcguLaKrujd91EuLYg7YzTWCVho442Ldi6kWhfMHnM1YlTWUWjV+c2QiWDiO8X0NrCxgrx8DPLeO2',
+    'x-amz-request-id': 'JD1XSPN6JYW8KAFP',
+    date: 'Wed, 13 Aug 2025 18:08:22 GMT',
+    'x-amz-server-side-encryption': 'AES256',
+    etag: '"1e50210a0202497fb79bc38b6ade6c34"',
+    'x-amz-checksum-crc64nvme': 'S/Cs/uryYoQ=',
+    'x-amz-checksum-type': 'FULL_OBJECT',
+    'content-length': '0',
+    server: 'AmazonS3'
+  }
+}
+AWS SDK request output: {
+  '$metadata': {
+    httpStatusCode: 200,
+    requestId: 'JD1XSPN6JYW8KAFP',
+    extendedRequestId: 'aYBYPTaBbjLl4r0KnxOEcguLaKrujd91EuLYg7YzTWCVho442Ldi6kWhfMHnM1YlTWUWjV+c2QiWDiO8X0NrCxgrx8DPLeO2',
+    cfId: undefined,
+    attempts: 1,
+    totalRetryDelay: 0
+  },
+  ETag: '"1e50210a0202497fb79bc38b6ade6c34"',
+  ServerSideEncryption: 'AES256',
+  Body: 'REDACTED'
+}
+AWS SDK context S3Client PutObjectCommand
+AWS SDK request input { Bucket: 'martin-slota-test', Key: 'object_16', Body: <Buffer > }
+AWS SDK HTTP Response: {
+  statusCode: 200,
+  headers: {
+    'x-amz-id-2': 'qRKzoz7cB7jYNen2J98x2+mCLl+OddNDiEEtqIPsRjov1a0lPDWlKIagMzsx/RdKzvkH09EeQvHcSdWjb0Wmzp12vs3a7NQg',
+    'x-amz-request-id': 'JD1M6A5JEAKN7EV1',
+    date: 'Wed, 13 Aug 2025 18:08:22 GMT',
+    'x-amz-server-side-encryption': 'AES256',
+    etag: '"d41d8cd98f00b204e9800998ecf8427e"',
+    'x-amz-checksum-crc64nvme': 'AAAAAAAAAAA=',
+    'x-amz-checksum-type': 'FULL_OBJECT',
+    'content-length': '0',
+    server: 'AmazonS3'
+  }
+}
+AWS SDK request output: {
+  '$metadata': {
+    httpStatusCode: 200,
+    requestId: 'JD1M6A5JEAKN7EV1',
+    extendedRequestId: 'qRKzoz7cB7jYNen2J98x2+mCLl+OddNDiEEtqIPsRjov1a0lPDWlKIagMzsx/RdKzvkH09EeQvHcSdWjb0Wmzp12vs3a7NQg',
+    cfId: undefined,
+    attempts: 1,
+    totalRetryDelay: 0
+  },
+  ETag: '"d41d8cd98f00b204e9800998ecf8427e"',
+  ServerSideEncryption: 'AES256',
+  Body: 'REDACTED'
+}
+Downloading batch with key object_15...
+AWS SDK context S3Client GetObjectCommand
+AWS SDK request input { Bucket: 'martin-slota-test', Key: 'object_15' }
+AWS SDK HTTP Response: {
+  statusCode: 200,
+  headers: {
+    'x-amz-id-2': '24cl92Ai1o7br6egw1T1pavTV3YTR+Mf/ijghqyJ9NdG/ASFvzuXgUB5656/LwY52ljOKbmyO/BgJ0tEbrYNDcnRsWq87Gcz',
+    'x-amz-request-id': 'JD1PZRBQ947QYS8J',
+    date: 'Wed, 13 Aug 2025 18:08:22 GMT',
+    'last-modified': 'Wed, 13 Aug 2025 18:08:22 GMT',
+    etag: '"1e50210a0202497fb79bc38b6ade6c34"',
+    'x-amz-server-side-encryption': 'AES256',
+    'accept-ranges': 'bytes',
+    'content-type': 'application/octet-stream',
+    'content-length': '9',
+    server: 'AmazonS3'
+  }
+}
+AWS SDK request output: {
+  '$metadata': {
+    httpStatusCode: 200,
+    requestId: 'JD1PZRBQ947QYS8J',
+    extendedRequestId: '24cl92Ai1o7br6egw1T1pavTV3YTR+Mf/ijghqyJ9NdG/ASFvzuXgUB5656/LwY52ljOKbmyO/BgJ0tEbrYNDcnRsWq87Gcz',
+    cfId: undefined,
+    attempts: 1,
+    totalRetryDelay: 0
+  },
+  AcceptRanges: 'bytes',
+  LastModified: 2025-08-13T18:08:22.000Z,
+  ContentLength: 9,
+  ETag: '"1e50210a0202497fb79bc38b6ade6c34"',
+  ContentType: 'application/octet-stream',
+  ServerSideEncryption: 'AES256',
+  Metadata: {},
+  Body: 'REDACTED'
+}
+Downloaded batch with key object_15
+Downloading batch with key object_16...
+AWS SDK context S3Client GetObjectCommand
+AWS SDK request input { Bucket: 'martin-slota-test', Key: 'object_16' }
+AWS SDK HTTP Response: {
+  statusCode: 200,
+  headers: {
+    'x-amz-id-2': '8mmXQ3GIF9lsFWzkSZaSAkJrBUC2H1DDWRssTZ31ZnjxbcuPqz5O5xWwhxWy4BF43IKInOj0kClJA7wWDy5GE8yVwMehFdmi',
+    'x-amz-request-id': 'JD1ZJ1JMP1T6372P',
+    date: 'Wed, 13 Aug 2025 18:08:22 GMT',
+    'last-modified': 'Wed, 13 Aug 2025 18:08:22 GMT',
+    etag: '"d41d8cd98f00b204e9800998ecf8427e"',
+    'x-amz-server-side-encryption': 'AES256',
+    'accept-ranges': 'bytes',
+    'content-type': 'application/octet-stream',
+    'content-length': '0',
+    server: 'AmazonS3'
+  }
+}
+AWS SDK request output: {
+  '$metadata': {
+    httpStatusCode: 200,
+    requestId: 'JD1ZJ1JMP1T6372P',
+    extendedRequestId: '8mmXQ3GIF9lsFWzkSZaSAkJrBUC2H1DDWRssTZ31ZnjxbcuPqz5O5xWwhxWy4BF43IKInOj0kClJA7wWDy5GE8yVwMehFdmi',
+    cfId: undefined,
+    attempts: 1,
+    totalRetryDelay: 0
+  },
+  AcceptRanges: 'bytes',
+  LastModified: 2025-08-13T18:08:22.000Z,
+  ContentLength: 0,
+  ETag: '"d41d8cd98f00b204e9800998ecf8427e"',
+  ContentType: 'application/octet-stream',
+  ServerSideEncryption: 'AES256',
+  Metadata: {},
+  Body: 'REDACTED'
+}
+Downloaded batch with key object_16
+AWS SDK context S3Client PutObjectCommand
+AWS SDK request input {
+  Bucket: 'martin-slota-test',
+  Key: 'object_17',
+  Body: <Buffer 73 6f 6d 65 20 64 61 74 61>
+}
+AWS SDK HTTP Response: {
+  statusCode: 200,
+  headers: {
+    'x-amz-id-2': 'EtY7O/zrRb/PFAjYXXTdSY0h5ZV7EL8yXLvNvw47JBBYfDEoWUMQ+5PORdiN/lRzOjMmCkksXLcWNedbV2YBBmemE9VQxiOh',
+    'x-amz-request-id': 'JD1MEBJ20ENJX81S',
+    date: 'Wed, 13 Aug 2025 18:08:22 GMT',
+    'x-amz-server-side-encryption': 'AES256',
+    etag: '"1e50210a0202497fb79bc38b6ade6c34"',
+    'x-amz-checksum-crc64nvme': 'S/Cs/uryYoQ=',
+    'x-amz-checksum-type': 'FULL_OBJECT',
+    'content-length': '0',
+    server: 'AmazonS3'
+  }
+}
+AWS SDK request output: {
+  '$metadata': {
+    httpStatusCode: 200,
+    requestId: 'JD1MEBJ20ENJX81S',
+    extendedRequestId: 'EtY7O/zrRb/PFAjYXXTdSY0h5ZV7EL8yXLvNvw47JBBYfDEoWUMQ+5PORdiN/lRzOjMmCkksXLcWNedbV2YBBmemE9VQxiOh',
+    cfId: undefined,
+    attempts: 1,
+    totalRetryDelay: 0
+  },
+  ETag: '"1e50210a0202497fb79bc38b6ade6c34"',
+  ServerSideEncryption: 'AES256',
+  Body: 'REDACTED'
+}
+Export finished
+AWS SDK context S3Client PutObjectCommand
+AWS SDK request input {
+  Bucket: 'martin-slota-test',
+  Key: 'object_18',
+  Body: <Buffer 73 6f 6d 65 20 64 61 74 61>
+}
+AWS SDK HTTP Response: {
+  statusCode: 200,
+  headers: {
+    'x-amz-id-2': 'YZKiDMrTe9s3I3nd79Vm9ZQiJ9W39jnzIQfV1f7mjJgchlVUWfsEG1icdkruyc6FaIzPtTdfC08LR6wRoNnTQKQSG8Pf45E2',
+    'x-amz-request-id': 'JD1PAE1DBKN26X19',
+    date: 'Wed, 13 Aug 2025 18:08:22 GMT',
+    'x-amz-server-side-encryption': 'AES256',
+    etag: '"1e50210a0202497fb79bc38b6ade6c34"',
+    'x-amz-checksum-crc64nvme': 'S/Cs/uryYoQ=',
+    'x-amz-checksum-type': 'FULL_OBJECT',
+    'content-length': '0',
+    server: 'AmazonS3'
+  }
+}
+AWS SDK request output: {
+  '$metadata': {
+    httpStatusCode: 200,
+    requestId: 'JD1PAE1DBKN26X19',
+    extendedRequestId: 'YZKiDMrTe9s3I3nd79Vm9ZQiJ9W39jnzIQfV1f7mjJgchlVUWfsEG1icdkruyc6FaIzPtTdfC08LR6wRoNnTQKQSG8Pf45E2',
+    cfId: undefined,
+    attempts: 1,
+    totalRetryDelay: 0
+  },
+  ETag: '"1e50210a0202497fb79bc38b6ade6c34"',
+  ServerSideEncryption: 'AES256',
+  Body: 'REDACTED'
+}
+AWS SDK context S3Client PutObjectCommand
+AWS SDK request input { Bucket: 'martin-slota-test', Key: 'object_19', Body: <Buffer > }
+AWS SDK HTTP Response: {
+  statusCode: 200,
+  headers: {
+    'x-amz-id-2': 'r8e+0UeFXKqZybE5F3CBrfC8Kol/IM9rhbAxSm/gXKJyfqCKSzRe06SblW0v3GX0nxI3RMHRYbRU3vzv6Sxgbe2a19O7ENiX',
+    'x-amz-request-id': 'M8X4AKN2C5KWCB3H',
+    date: 'Wed, 13 Aug 2025 18:08:23 GMT',
+    'x-amz-server-side-encryption': 'AES256',
+    etag: '"d41d8cd98f00b204e9800998ecf8427e"',
+    'x-amz-checksum-crc64nvme': 'AAAAAAAAAAA=',
+    'x-amz-checksum-type': 'FULL_OBJECT',
+    'content-length': '0',
+    server: 'AmazonS3'
+  }
+}
+AWS SDK request output: {
+  '$metadata': {
+    httpStatusCode: 200,
+    requestId: 'M8X4AKN2C5KWCB3H',
+    extendedRequestId: 'r8e+0UeFXKqZybE5F3CBrfC8Kol/IM9rhbAxSm/gXKJyfqCKSzRe06SblW0v3GX0nxI3RMHRYbRU3vzv6Sxgbe2a19O7ENiX',
+    cfId: undefined,
+    attempts: 1,
+    totalRetryDelay: 0
+  },
+  ETag: '"d41d8cd98f00b204e9800998ecf8427e"',
+  ServerSideEncryption: 'AES256',
+  Body: 'REDACTED'
+}
+Downloading batch with key object_18...
+AWS SDK context S3Client GetObjectCommand
+AWS SDK request input { Bucket: 'martin-slota-test', Key: 'object_18' }
+AWS SDK HTTP Response: {
+  statusCode: 200,
+  headers: {
+    'x-amz-id-2': '2fXC2NY+ifIA9Laha6I9vkDvER4aeWzxl96qgFT4eNrVJML+mXZ2J7A7J3+9ubOeOByraJvpvOT8RBxIPWAtPz8YW4nH2xcd',
+    'x-amz-request-id': 'M8XA0KYW90B3MYQ0',
+    date: 'Wed, 13 Aug 2025 18:08:23 GMT',
+    'last-modified': 'Wed, 13 Aug 2025 18:08:22 GMT',
+    etag: '"1e50210a0202497fb79bc38b6ade6c34"',
+    'x-amz-server-side-encryption': 'AES256',
+    'accept-ranges': 'bytes',
+    'content-type': 'application/octet-stream',
+    'content-length': '9',
+    server: 'AmazonS3'
+  }
+}
+AWS SDK request output: {
+  '$metadata': {
+    httpStatusCode: 200,
+    requestId: 'M8XA0KYW90B3MYQ0',
+    extendedRequestId: '2fXC2NY+ifIA9Laha6I9vkDvER4aeWzxl96qgFT4eNrVJML+mXZ2J7A7J3+9ubOeOByraJvpvOT8RBxIPWAtPz8YW4nH2xcd',
+    cfId: undefined,
+    attempts: 1,
+    totalRetryDelay: 0
+  },
+  AcceptRanges: 'bytes',
+  LastModified: 2025-08-13T18:08:22.000Z,
+  ContentLength: 9,
+  ETag: '"1e50210a0202497fb79bc38b6ade6c34"',
+  ContentType: 'application/octet-stream',
+  ServerSideEncryption: 'AES256',
+  Metadata: {},
+  Body: 'REDACTED'
+}
+Downloaded batch with key object_18
+Downloading batch with key object_19...
+AWS SDK context S3Client GetObjectCommand
+AWS SDK request input { Bucket: 'martin-slota-test', Key: 'object_19' }
+AWS SDK HTTP Response: {
+  statusCode: 200,
+  headers: {
+    'x-amz-id-2': 'T3EgUHA2OHvsQYqL8OatCmxhJGn1XUNZdHktRbclISn6eVVxsG5Wlo8c9K9kmsPo206K9v19lJycbvLAHA2vlB/ZVohewL7O',
+    'x-amz-request-id': 'M8X60ZNRH2NHG6HP',
+    date: 'Wed, 13 Aug 2025 18:08:23 GMT',
+    'last-modified': 'Wed, 13 Aug 2025 18:08:23 GMT',
+    etag: '"d41d8cd98f00b204e9800998ecf8427e"',
+    'x-amz-server-side-encryption': 'AES256',
+    'accept-ranges': 'bytes',
+    'content-type': 'application/octet-stream',
+    'content-length': '0',
+    server: 'AmazonS3'
+  }
+}
+AWS SDK request output: {
+  '$metadata': {
+    httpStatusCode: 200,
+    requestId: 'M8X60ZNRH2NHG6HP',
+    extendedRequestId: 'T3EgUHA2OHvsQYqL8OatCmxhJGn1XUNZdHktRbclISn6eVVxsG5Wlo8c9K9kmsPo206K9v19lJycbvLAHA2vlB/ZVohewL7O',
+    cfId: undefined,
+    attempts: 1,
+    totalRetryDelay: 0
+  },
+  AcceptRanges: 'bytes',
+  LastModified: 2025-08-13T18:08:23.000Z,
+  ContentLength: 0,
+  ETag: '"d41d8cd98f00b204e9800998ecf8427e"',
+  ContentType: 'application/octet-stream',
+  ServerSideEncryption: 'AES256',
+  Metadata: {},
+  Body: 'REDACTED'
+}
+Downloaded batch with key object_19
+AWS SDK context S3Client PutObjectCommand
+AWS SDK request input {
+  Bucket: 'martin-slota-test',
+  Key: 'object_20',
+  Body: <Buffer 73 6f 6d 65 20 64 61 74 61>
+}
+AWS SDK HTTP Response: {
+  statusCode: 200,
+  headers: {
+    'x-amz-id-2': 'APJCO0O+O9f9rspmSg19gV6SMGqiBEMlh2KZq/o/FQ8fiYNTkQJD/vb4HoCnyLpPBm/f70wnbMwOpyfsKJGjxYtn8BvZ8u4S',
+    'x-amz-request-id': 'M8X3M985FDESV8GK',
+    date: 'Wed, 13 Aug 2025 18:08:23 GMT',
+    'x-amz-server-side-encryption': 'AES256',
+    etag: '"1e50210a0202497fb79bc38b6ade6c34"',
+    'x-amz-checksum-crc64nvme': 'S/Cs/uryYoQ=',
+    'x-amz-checksum-type': 'FULL_OBJECT',
+    'content-length': '0',
+    server: 'AmazonS3'
+  }
+}
+AWS SDK request output: {
+  '$metadata': {
+    httpStatusCode: 200,
+    requestId: 'M8X3M985FDESV8GK',
+    extendedRequestId: 'APJCO0O+O9f9rspmSg19gV6SMGqiBEMlh2KZq/o/FQ8fiYNTkQJD/vb4HoCnyLpPBm/f70wnbMwOpyfsKJGjxYtn8BvZ8u4S',
+    cfId: undefined,
+    attempts: 1,
+    totalRetryDelay: 0
+  },
+  ETag: '"1e50210a0202497fb79bc38b6ade6c34"',
+  ServerSideEncryption: 'AES256',
+  Body: 'REDACTED'
+}
+Export finished
+AWS SDK context S3Client PutObjectCommand
+AWS SDK request input {
+  Bucket: 'martin-slota-test',
+  Key: 'object_21',
+  Body: <Buffer 73 6f 6d 65 20 64 61 74 61>
+}
+AWS SDK HTTP Response: {
+  statusCode: 200,
+  headers: {
+    'x-amz-id-2': '79n7jkPnwzH9DDtIDURHJilMaY9zAjpQTo+ld3Rjdy44tiqvHy6FiE/u3cSO5f4zk6oUvNFcpf4SPpNxBjBvyiH0XS+AeNw7',
+    'x-amz-request-id': 'M8X7NR0YVQ95XW23',
+    date: 'Wed, 13 Aug 2025 18:08:23 GMT',
+    'x-amz-server-side-encryption': 'AES256',
+    etag: '"1e50210a0202497fb79bc38b6ade6c34"',
+    'x-amz-checksum-crc64nvme': 'S/Cs/uryYoQ=',
+    'x-amz-checksum-type': 'FULL_OBJECT',
+    'content-length': '0',
+    server: 'AmazonS3'
+  }
+}
+AWS SDK request output: {
+  '$metadata': {
+    httpStatusCode: 200,
+    requestId: 'M8X7NR0YVQ95XW23',
+    extendedRequestId: '79n7jkPnwzH9DDtIDURHJilMaY9zAjpQTo+ld3Rjdy44tiqvHy6FiE/u3cSO5f4zk6oUvNFcpf4SPpNxBjBvyiH0XS+AeNw7',
+    cfId: undefined,
+    attempts: 1,
+    totalRetryDelay: 0
+  },
+  ETag: '"1e50210a0202497fb79bc38b6ade6c34"',
+  ServerSideEncryption: 'AES256',
+  Body: 'REDACTED'
+}
+AWS SDK context S3Client PutObjectCommand
+AWS SDK request input { Bucket: 'martin-slota-test', Key: 'object_22', Body: <Buffer > }
+AWS SDK HTTP Response: {
+  statusCode: 200,
+  headers: {
+    'x-amz-id-2': 'sEPd0rgFoWolvKc+JKpYamhIpeviDWw8Wc+ZMsPjZ+1UJwcx9HZwe24gPeMVltW5ILVCAITXI03hc9THiz70sv+xMQikYYu9',
+    'x-amz-request-id': 'M8XEH1Q9B8WH4JX0',
+    date: 'Wed, 13 Aug 2025 18:08:23 GMT',
+    'x-amz-server-side-encryption': 'AES256',
+    etag: '"d41d8cd98f00b204e9800998ecf8427e"',
+    'x-amz-checksum-crc64nvme': 'AAAAAAAAAAA=',
+    'x-amz-checksum-type': 'FULL_OBJECT',
+    'content-length': '0',
+    server: 'AmazonS3'
+  }
+}
+AWS SDK request output: {
+  '$metadata': {
+    httpStatusCode: 200,
+    requestId: 'M8XEH1Q9B8WH4JX0',
+    extendedRequestId: 'sEPd0rgFoWolvKc+JKpYamhIpeviDWw8Wc+ZMsPjZ+1UJwcx9HZwe24gPeMVltW5ILVCAITXI03hc9THiz70sv+xMQikYYu9',
+    cfId: undefined,
+    attempts: 1,
+    totalRetryDelay: 0
+  },
+  ETag: '"d41d8cd98f00b204e9800998ecf8427e"',
+  ServerSideEncryption: 'AES256',
+  Body: 'REDACTED'
+}
+Downloading batch with key object_21...
+AWS SDK context S3Client GetObjectCommand
+AWS SDK request input { Bucket: 'martin-slota-test', Key: 'object_21' }

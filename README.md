@@ -12,7 +12,7 @@ empty stream results in a race condition which causes other S3 commands to hang.
 1. Set up environment variables by running `cp .env.localstack .env`
 1. Run `npm run start-localstack`
 
-After some time, the script tends to lock up and fail while attempting to initiate a download stream, producing [this kind of output](./example_output.txt).
+After some time, the script tends to lock up and fail while attempting to initiate a download stream, producing [this kind of output](./example_output_localstack.txt).
 
 ## Steps to reproduce the race condition against AWS
 
@@ -28,4 +28,4 @@ After some time, the script tends to lock up and fail while attempting to initia
 
 1. Run `npm run start-aws`
 
-After some time, the script tends to lock up and fail while attempting to initiate a download stream, producing [this kind of output](./example_output.txt).
+After some time, the script tends to lock up and fail while attempting to initiate a download stream, producing [this kind of output](./example_output_aws.txt).
