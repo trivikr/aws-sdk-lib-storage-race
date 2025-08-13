@@ -19,7 +19,7 @@
   "license": "ISC",
   "type": "module",
   "scripts": {
-    "start": "node index.js",
+    "start-aws": "node index.js",
     "start-localstack": "docker compose up --wait && AWS_S3_ENDPOINT=https://s3.localhost.localstack.cloud:4566 node index.js"
   },
   "devDependencies": {
