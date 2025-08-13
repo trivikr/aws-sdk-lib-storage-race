@@ -35,11 +35,11 @@ s3Client.middlewareStack.add(
 
 async function ensureBucketExists() {
   try {
-    await s3Client.send(
-      new CreateBucketCommand({ Bucket: BUCKET_NAME, ACL: "public-read" })
-    );
+    await s3Client.send(new CreateBucketCommand({ Bucket: BUCKET_NAME }));
   } catch (e) {
-    // intentionally ignored
+    if (e.name !== "BucketAlreadyOwnedByYou") {
+      throw e;
+    }
   }
 }
 
