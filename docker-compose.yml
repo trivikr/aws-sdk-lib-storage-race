@@ -5,4 +5,6 @@ services:
     ports:
       - "4566:4566"
     environment:
+      - DEBUG=1
+      - LS_LOG=trace
       - SERVICES=s3
