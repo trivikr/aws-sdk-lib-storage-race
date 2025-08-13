@@ -28,5 +28,8 @@
     "dotenv": "^16.4.5",
     "p-timeout": "^6.1.2",
     "prettier": "3.3.3"
+  },
+  "dependencies": {
+    "@aws-sdk/node-http-handler": "^3.374.0"
   }
 }

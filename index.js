@@ -6,6 +6,7 @@ import {
   S3Client,
 } from "@aws-sdk/client-s3";
 import { Upload } from "@aws-sdk/lib-storage";
+import { NodeHttpHandler } from "@aws-sdk/node-http-handler";
 import pTimeout from "p-timeout";
 import dotenv from "dotenv";
 
@@ -13,8 +14,26 @@ dotenv.config();
 
 const BUCKET_NAME = "martin-slota-test";
 
+class LoggingHttpHandler {
+  constructor(options) {
+    this.innerHandler = new NodeHttpHandler(options);
+  }
+
+  async handle(request, options) {
+    const response = await this.innerHandler.handle(request, options);
+
+    console.log("AWS SDK HTTP Response:", {
+      statusCode: response.response.statusCode,
+      headers: response.response.headers,
+    });
+
+    return response;
+  }
+}
+
 const s3Client = new S3Client({
   endpoint: process.env.AWS_S3_ENDPOINT,
+  requestHandler: new LoggingHttpHandler(),
 });
 
 s3Client.middlewareStack.add(
