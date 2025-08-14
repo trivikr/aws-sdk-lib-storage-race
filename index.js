@@ -12,7 +12,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const BUCKET_NAME = "martin-slota-test";
+const BUCKET_NAME = "test-js-6426";
 
 class LoggingHttpHandler {
   constructor(options) {
@@ -20,12 +20,9 @@ class LoggingHttpHandler {
   }
 
   async handle(request, options) {
+    console.log(`sending request: ${request.method} for ${request.path}`);
     const response = await this.innerHandler.handle(request, options);
-
-    console.log("AWS SDK HTTP Response:", {
-      statusCode: response.response.statusCode,
-      headers: response.response.headers,
-    });
+    console.log(`received response: ${request.method} for ${request.path}`);
 
     return response;
   }
@@ -35,22 +32,6 @@ const s3Client = new S3Client({
   endpoint: process.env.AWS_S3_ENDPOINT,
   requestHandler: new LoggingHttpHandler(),
 });
-
-s3Client.middlewareStack.add(
-  (next, context) => async (args) => {
-    console.log("AWS SDK context", context.clientName, context.commandName);
-    console.log("AWS SDK request input", args.input);
-    const result = await next(args);
-    const { Body, ...rest } = result.output;
-    console.log("AWS SDK request output:", { ...rest, Body: "REDACTED" });
-    return result;
-  },
-  {
-    name: "MyMiddleware",
-    step: "build",
-    override: true,
-  }
-);
 
 async function ensureBucketExists() {
   try {
@@ -121,9 +102,7 @@ export async function exportStuff() {
     const uploadPromise = uploadStream(writer);
 
     for (const batchKey of batchKeys) {
-      console.log(`Downloading batch with key ${batchKey}...`);
       const reader = await downloadStream(batchKey);
-      console.log(`Downloaded batch with key ${batchKey}`);
       for await (const data of reader) {
         writer.write(data);
       }
@@ -132,8 +111,6 @@ export async function exportStuff() {
     writer.end();
     await uploadPromise;
   }
-
-  console.log("Export finished");
 }
 
 await ensureBucketExists();
