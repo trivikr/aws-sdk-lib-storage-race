@@ -12,7 +12,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const BUCKET_NAME = "test-js-6426";
+const BUCKET_NAME = process.env.TEST_BUCKET_NAME;
 
 class LoggingHttpHandler {
   constructor(options) {
