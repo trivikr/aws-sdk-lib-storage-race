@@ -45,8 +45,7 @@ async function ensureBucketExists() {
 
 let sequenceNumber = 0;
 
-async function uploadStream(body) {
-  const key = `object_${sequenceNumber++}`;
+async function uploadStream(key, body) {
   const upload = new Upload({
     client: s3Client,
     params: {
@@ -67,50 +66,16 @@ async function downloadStream(key) {
   });
 
   const response = await s3Client.send(command);
-  return response.Body;
+  // consume the downloaded stream.
+  return response.Body.transformToString();
 }
 
 export async function exportStuff() {
-  const batchKeys = [];
-
-  // upload one batch of data
-  {
-    const writer = new PassThrough();
-    const uploadPromise = uploadStream(writer);
-
-    // write some data
-    writer.write("some data");
-    writer.end();
-
-    batchKeys.push(await uploadPromise);
-  }
-
-  // upload another batch of data
-  {
-    const writer = new PassThrough();
-    const uploadPromise = uploadStream(writer);
-
-    // whoops, it turns out there is no data to write
-    writer.end();
-
-    batchKeys.push(await uploadPromise);
-  }
-
-  // concatenate all the batches into a single S3 object
-  {
-    const writer = new PassThrough();
-    const uploadPromise = uploadStream(writer);
-
-    for (const batchKey of batchKeys) {
-      const reader = await downloadStream(batchKey);
-      for await (const data of reader) {
-        writer.write(data);
-      }
-    }
-
-    writer.end();
-    await uploadPromise;
-  }
+  const writer = new PassThrough();
+  writer.end();
+  const key = `object_${sequenceNumber++}`;
+  await uploadStream(key, writer);
+  await downloadStream(key);
 }
 
 await ensureBucketExists();
