@@ -2,10 +2,10 @@ import { PassThrough } from "node:stream";
 
 import {
   CreateBucketCommand,
+  PutObjectCommand,
   GetObjectCommand,
   S3Client,
 } from "@aws-sdk/client-s3";
-import { Upload } from "@aws-sdk/lib-storage";
 import { NodeHttpHandler } from "@aws-sdk/node-http-handler";
 import pTimeout from "p-timeout";
 import dotenv from "dotenv";
@@ -47,16 +47,13 @@ let sequenceNumber = 0;
 
 async function uploadStream(body) {
   const key = `object_${sequenceNumber++}`;
-  const upload = new Upload({
-    client: s3Client,
-    params: {
-      Bucket: BUCKET_NAME,
-      Key: key,
-      Body: body,
-    },
+  const command = new PutObjectCommand({
+    Bucket: BUCKET_NAME,
+    Key: key,
+    Body: body,
   });
 
-  await upload.done();
+  await s3Client.send(command);
   return key;
 }
 
